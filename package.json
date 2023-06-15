@@ -7,7 +7,9 @@
   "scripts": {
     "test": "lerna run test",
     "new-version": "lerna version --conventional-commits --yes",
-    "diff": "lerna diff"
+    "diff": "lerna diff",
+    "release": "lerna version --conventional-commits && npm run github-release",
+    "github-release": "conventional-github-releaser -p angular -t $GH_TOKEN"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "conventional-github-releaser": "^3.1.5",
     "lerna": "^6.6.1"
   }
 }
