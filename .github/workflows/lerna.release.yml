@@ -21,5 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install -g lerna
 
-      - name: Run Lerna Release
+      - name: Initialize lerna
+        run: npx lerna init
+
+      - name: Lerna versioning
         run: npm run new-version
