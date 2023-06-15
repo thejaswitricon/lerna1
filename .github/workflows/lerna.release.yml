@@ -1,25 +1,27 @@
-name: Lerna Release
+name: Versioning
 
 on:
   push:
     branches:
-      - master
+      - master  # Modify this according to your branch name
+
 permissions: write-all
+
 jobs:
-  release:
+  versioning:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 14  # Modify this according to your Node.js version requirements
 
       - name: Install dependencies
-        run: npm install -g lerna
+        run: npm install lerna
 
       - name: Commit changes
         run: |
@@ -32,4 +34,11 @@ jobs:
         run: npx lerna init
 
       - name: Lerna versioning
-        run: npx lerna version --conventional-commits --yes
+        run: npx lerna version --conventional-commits --yes 
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          branch: ${{ github.ref }}
+          tags: true
+          github_token: ${{ secrets.PAT_GITHUB2 }}
