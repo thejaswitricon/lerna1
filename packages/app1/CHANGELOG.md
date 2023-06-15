@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/thejaswitricon/lerna1/compare/@packages/app1@1.1.2...@packages/app1@1.1.3) (2023-06-15)
+
+
+### Bug Fixes
+
+* test ([2ea4ca8](https://github.com/thejaswitricon/lerna1/commit/2ea4ca87763f0ae8862f82d71fed6bfa01746d5e))
+* test ([f75c5ba](https://github.com/thejaswitricon/lerna1/commit/f75c5bafe8ade3d9ba4f7c4a3322d0057b7a2438))
+* test ([ac8cc40](https://github.com/thejaswitricon/lerna1/commit/ac8cc40f852799fbae28893c0d3b56dc2999c468))
+
+
+
+
+
 ## [1.1.1](https://github.com/thejaswitricon/lerna1/compare/@packages/app1@1.1.0...@packages/app1@1.1.1) (2023-06-15)
 
 
