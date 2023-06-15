@@ -3,7 +3,7 @@ name: Lerna Release
 on:
   push:
     branches:
-      - master
+      - mater
 permissions: write-all
 jobs:
   release:
