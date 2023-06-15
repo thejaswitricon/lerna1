@@ -21,6 +21,13 @@ jobs:
       - name: Install dependencies
         run: npm install -g lerna
 
+      - name: Commit changes
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git add package-lock.json package.json
+          git commit -m "Committing changes before versioning"
+
       - name: Initialize lerna
         run: npx lerna init
 
