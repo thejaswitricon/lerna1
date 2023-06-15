@@ -25,4 +25,4 @@ jobs:
         run: npx lerna init
 
       - name: Lerna versioning
-        run: npm run new-version
+        run: npx lerna version --conventional-commits --yes
